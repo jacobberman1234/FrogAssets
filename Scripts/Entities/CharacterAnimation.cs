@@ -12,9 +12,7 @@ public class CharacterAnimation : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
         if(_anim == null)
-        {
             _anim = GetComponentInChildren<Animator>();
-        }
     }
 
     private void Update()
@@ -32,6 +30,7 @@ public class CharacterAnimation : MonoBehaviour
         _anim.SetBool("isMoving", isMoving);
     }
 
+    //Called in Idles as Animation Event
     public void RandomIdle()
     {
         int randomIdle = Random.Range(0, 3);

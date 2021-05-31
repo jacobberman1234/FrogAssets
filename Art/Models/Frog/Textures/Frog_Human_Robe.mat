@@ -124,6 +124,7 @@ Material:
     m_Colors:
     - Color_32eef7f45a6b48238fab3d2b79b408fd: {r: 0.03333334, g: 0.01568628, b: 0.002941177, a: 1}
     - Color_4f59a38ef3bb4a95a5b32b930a2fa5a1: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+    - Vector2_8e412dba9ddb4fdab3357d52509c0e54: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -15,3 +15,6 @@ MonoBehaviour:
   avatar: {fileID: 9000000, guid: 931db4fc0b73402459dd13fade601abb, type: 3}
   controller: {fileID: 9100000, guid: b1b1b8c533197784b9c0edb86d0c07db, type: 2}
   moveSpeed: 1
+  colliderCenter: {x: 0, y: 0.75, z: 0}
+  colliderRadius: 0.21
+  colliderHeight: 1.48

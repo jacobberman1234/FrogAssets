@@ -7,6 +7,7 @@ public class FrogTransformation : MonoBehaviour
 {
     private Animator _anim;
     private PlayerMovement _movement;
+    private CharacterController _characterController;
 
     //Index 0 is Human, Index 1 is Frog
     [Header("References")]
@@ -16,17 +17,21 @@ public class FrogTransformation : MonoBehaviour
 
     private bool _inHumanForm;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         _anim = GetComponent<Animator>();
         _movement = GetComponent<PlayerMovement>();
+        _characterController = GetComponent<CharacterController>();
+    }
+
+    private void Start()
+    {
         //Start as a frog
         TransformIntoFrog(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -57,6 +62,9 @@ public class FrogTransformation : MonoBehaviour
         _anim.avatar = settings.avatar;
         _anim.runtimeAnimatorController = settings.controller;
         _movement.MoveSpeed = settings.moveSpeed;
+        _characterController.center = settings.colliderCenter;
+        _characterController.radius = settings.colliderRadius;
+        _characterController.height = settings.colliderHeight;
         _inHumanForm = !_inHumanForm;
     }
 }

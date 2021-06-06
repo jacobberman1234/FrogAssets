@@ -11,6 +11,7 @@ public class TransformationSettings : ScriptableObject
 
     [Header("Value Settings")]
     public float moveSpeed;
+    public float jumpHeight;
 
     [Header("Collider Settings")]
     public Vector3 colliderCenter;

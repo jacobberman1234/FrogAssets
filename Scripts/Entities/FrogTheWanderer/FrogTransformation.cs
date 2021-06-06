@@ -61,7 +61,8 @@ public class FrogTransformation : MonoBehaviour
         }
         _anim.avatar = settings.avatar;
         _anim.runtimeAnimatorController = settings.controller;
-        _movement.MoveSpeed = settings.moveSpeed;
+        _movement.moveSpeed = settings.moveSpeed;
+        _movement.jumpHeight = settings.jumpHeight;
         _characterController.center = settings.colliderCenter;
         _characterController.radius = settings.colliderRadius;
         _characterController.height = settings.colliderHeight;

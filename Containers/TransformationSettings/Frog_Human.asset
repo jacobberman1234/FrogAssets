@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2578829adb399a439927d81343875c9, type: 3}
   m_Name: Frog_Human
   m_EditorClassIdentifier: 
-  avatar: {fileID: 9000000, guid: 931db4fc0b73402459dd13fade601abb, type: 3}
+  avatar: {fileID: 9000000, guid: 7347091469fa24441a48f4b57b5fa638, type: 3}
   controller: {fileID: 9100000, guid: b1b1b8c533197784b9c0edb86d0c07db, type: 2}
-  moveSpeed: 1
+  moveSpeed: 3
   jumpHeight: 1
   colliderCenter: {x: 0, y: 0.75, z: 0}
   colliderRadius: 0.21

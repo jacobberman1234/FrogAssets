@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae7b18438d8b97744bed611102b35bd4, type: 3}
-  m_Name: ConeOfFire
+  m_Name: ConeOfIce
   m_EditorClassIdentifier: 
-  name: Cone Of Fire
+  name: Cone Of Ice
   spellAnimationClip: {fileID: 0}
-  spellPrefab: {fileID: 7488089516100607676, guid: d220be0e1342409448f261addb0e3112, type: 3}
+  spellPrefab: {fileID: 7488089516100607676, guid: 0b848a2f8564f18488558652654ee7e9, type: 3}
   duration: 3
   damage: 10
   range: 15

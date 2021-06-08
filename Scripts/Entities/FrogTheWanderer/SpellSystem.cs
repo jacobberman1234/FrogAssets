@@ -11,11 +11,7 @@ public class SpellSystem : MonoBehaviour
 
     private void Start()
     {
-        if(_spellbook.Count > 0)
-            _activeSpell = _spellbook[0];
-        _activeSpellPrefab = Instantiate(_activeSpell.spellPrefab, _spellPoint.position, _spellPoint.rotation);
-        _activeSpellPrefab.SetActive(false);
-        _activeSpellPrefab.transform.SetParent(_spellPoint);
+        InitializeSpell(0);
     }
 
     private void Update()
@@ -27,10 +23,27 @@ public class SpellSystem : MonoBehaviour
                _activeSpellPrefab.SetActive(true);
             _activeSpellPrefab.GetComponent<SpellData>().EnableEmission(true);
         }
+
+        if(Helper.NumInputToInt() != -1)
+        {
+            SetActiveSpell(Helper.NumInputToInt()-1);
+        }
     }
 
-    private void CastActiveSpell()
+    private void InitializeSpell(int spellbookIndex)
     {
-
+        if (_spellbook.Count > 0)
+            _activeSpell = _spellbook[spellbookIndex];
+        _activeSpellPrefab = Instantiate(_activeSpell.spellPrefab, _spellPoint.position, _spellPoint.rotation);
+        _activeSpellPrefab.SetActive(false);
+        _activeSpellPrefab.transform.SetParent(_spellPoint);
+        Debug.Log($"Active spell is now {_activeSpell.name}");
+    }
+    
+    private void SetActiveSpell(int spellbookIndex)
+    {
+        if (_spellbook.Count <= spellbookIndex) return;
+        Destroy(_activeSpellPrefab);
+        InitializeSpell(spellbookIndex);
     }
 }

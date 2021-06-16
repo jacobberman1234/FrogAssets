@@ -19,4 +19,10 @@ public static class Helper
         }
         return -1;
     }
+
+    public static Vector3 RandomVector3(Vector3 minVal, Vector3 maxVal)
+    {
+        return new Vector3(Random.Range(minVal.x, maxVal.x),
+            Random.Range(minVal.y, maxVal.y), Random.Range(minVal.z, maxVal.z));
+    }
 }

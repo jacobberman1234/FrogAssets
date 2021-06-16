@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5837037674215502323}
   - component: {fileID: 1854284338126176667}
   - component: {fileID: 3303577784462304860}
+  - component: {fileID: 839250872893403005}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -96,3 +97,23 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &839250872893403005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030647802575464187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8aef6093556a6479895f6767402559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 6097079283816231164, guid: 4fbf37b629d914449b78fb088114b2af, type: 3}
+  _desiredParent: {fileID: 0}
+  _minRotationOffset: {x: 0, y: 0, z: 0}
+  _maxRotationOffset: {x: 0, y: 0, z: 0}
+  _minPositionOffset: {x: 0, y: 0, z: 0}
+  _maxPositionOffset: {x: 0, y: 0, z: 0}
+  _minScale: 0.8
+  _maxScale: 1.2

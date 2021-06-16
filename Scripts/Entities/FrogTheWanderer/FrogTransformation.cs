@@ -16,6 +16,7 @@ public class FrogTransformation : MonoBehaviour
     [SerializeField] private TransformationSettings[] _transformationSettings;
 
     private bool _inHumanForm;
+    public bool InHumanForm => _inHumanForm;
 
 
     private void Awake()
@@ -28,7 +29,8 @@ public class FrogTransformation : MonoBehaviour
     private void Start()
     {
         //Start as a frog
-        TransformIntoFrog(true);
+        _inHumanForm = true;
+        TransformIntoFrog(!_inHumanForm);
     }
 
     private void Update()
@@ -45,11 +47,11 @@ public class FrogTransformation : MonoBehaviour
         int human = 0;
         int frog = 1;
         TransformationSettings settings;
-        _forms[human].SetActive(!value);
-        _forms[frog].SetActive(value);
-        _cameras[human].SetActive(!value);
-        _cameras[frog].SetActive(value);
-        if (value)
+        _forms[human].SetActive(value);
+        _forms[frog].SetActive(!value);
+        _cameras[human].SetActive(value);
+        _cameras[frog].SetActive(!value);
+        if (!value)
         {
             settings = _transformationSettings[frog];
             Debug.Log("Turning into frog");
@@ -67,5 +69,6 @@ public class FrogTransformation : MonoBehaviour
         _characterController.radius = settings.colliderRadius;
         _characterController.height = settings.colliderHeight;
         _inHumanForm = !_inHumanForm;
+        Debug.Log(_inHumanForm);
     }
 }

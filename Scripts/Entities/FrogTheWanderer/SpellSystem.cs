@@ -16,7 +16,7 @@ public class SpellSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GetComponent<FrogTransformation>().InHumanForm)
         {
             _activeSpell.Cast();
             if (!_activeSpellPrefab.activeSelf)

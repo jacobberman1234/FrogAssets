@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Cone Of Fire
   spellAnimationClip: {fileID: 0}
-  spellPrefab: {fileID: 7488089516100607676, guid: d220be0e1342409448f261addb0e3112, type: 3}
+  spellPrefab: {fileID: 5094399256096212589, guid: 47598ae55a3df03419dbd27013bc58fd, type: 3}
   duration: 3
   damage: 10
   range: 15

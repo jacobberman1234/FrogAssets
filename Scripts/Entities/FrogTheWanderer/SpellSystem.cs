@@ -21,7 +21,6 @@ public class SpellSystem : MonoBehaviour
             _activeSpell.Cast();
             if (!_activeSpellPrefab.activeSelf)
                _activeSpellPrefab.SetActive(true);
-            _activeSpellPrefab.GetComponent<SpellData>().EnableEmission(true);
         }
 
         if(Helper.NumInputToInt() != -1)
